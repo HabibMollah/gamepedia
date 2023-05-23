@@ -10,7 +10,6 @@ function DarkModeSwitch() {
         colorScheme="orange"
         onChange={toggleColorMode}
         isChecked={colorMode === 'dark'}
-        size={'lg'}
       />
       <Text>🌙</Text>
     </HStack>
