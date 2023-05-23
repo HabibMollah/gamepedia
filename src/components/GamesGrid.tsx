@@ -14,6 +14,7 @@ function GamesGrid() {
             key={game.id}
             game={game}
             platforms={game.parent_platforms}
+            metacritic={game.metacritic}
           />
         ))}
       </SimpleGrid>

@@ -2,7 +2,7 @@ interface Props {
   metacritic: number;
 }
 function MetaCriticScore({ metacritic }: Props) {
-  return <div>MetaCriticScore</div>;
+  return <div>{metacritic}</div>;
 }
 
 export default MetaCriticScore;
