@@ -2,6 +2,7 @@ import { Card, CardBody, HStack, Heading, Image } from '@chakra-ui/react';
 import { Game, Platform } from '../hooks/useGames';
 import PlatformsList from './PlatformsList';
 import MetaCriticScore from './MetaCriticScore';
+import cropImage from '../services/cropImage';
 
 interface Props {
   game: Game;
@@ -12,7 +13,7 @@ interface Props {
 function GameCard({ game, platforms, metacritic }: Props) {
   return (
     <Card overflow={'hidden'} borderRadius={20}>
-      <Image src={game.background_image} />
+      <Image src={cropImage(game.background_image)} />
       <CardBody>
         <Heading fontSize={'2xl'}>{game.name}</Heading>
 
