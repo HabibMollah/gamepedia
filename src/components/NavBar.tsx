@@ -1,15 +1,26 @@
-import { HStack, Image, Text } from '@chakra-ui/react';
+import { HStack, Image, Switch, Text, useColorMode } from '@chakra-ui/react';
 import logo from '../assets/logo.webp';
 function NavBar() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
-    <HStack>
+    <HStack justifyContent={'space-between'} padding={'16px'}>
       <Image
         src={logo}
         alt="GamePedia logo"
         boxSize="60px"
         borderRadius={100}
       />
-      <Text>NavBar</Text>
+      <HStack>
+        <Text>☀️</Text>
+        <Switch
+          colorScheme="orange"
+          onChange={toggleColorMode}
+          isChecked={colorMode === 'dark'}
+          size={'lg'}
+        />
+        <Text>🌙</Text>
+      </HStack>
     </HStack>
   );
 }
