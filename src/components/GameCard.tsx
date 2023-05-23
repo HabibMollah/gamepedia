@@ -10,7 +10,7 @@ function GameCard({ game }: Props) {
     <Card overflow={'hidden'} borderRadius={20}>
       <Image src={game.background_image} />
       <CardBody>
-        <Heading>{game.name}</Heading>
+        <Heading fontSize={'2xl'}>{game.name}</Heading>
       </CardBody>
     </Card>
   );
