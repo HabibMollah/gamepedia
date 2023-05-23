@@ -16,7 +16,6 @@ function GameCard({ game, platforms, metacritic }: Props) {
       <Image src={cropImage(game.background_image)} />
       <CardBody>
         <Heading fontSize={'2xl'}>{game.name}</Heading>
-
         <HStack justify={'space-between'}>
           <PlatformsList
             platforms={platforms.map((platformObj) => platformObj.platform)}
