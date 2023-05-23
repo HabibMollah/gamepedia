@@ -12,6 +12,13 @@ export interface Game {
   name: string;
   background_image: string;
   rating: number;
+  parent_platforms: { platform: Platform }[];
+}
+
+export interface Platform {
+  id: number;
+  name: string;
+  slug: string;
 }
 
 export default function useGames() {
