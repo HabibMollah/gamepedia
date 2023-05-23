@@ -1,5 +1,6 @@
 import { Grid, GridItem, Show } from '@chakra-ui/react';
 import NavBar from './components/NavBar';
+import GamesGrid from './components/GamesGrid';
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
             sidebar
           </GridItem>
         </Show>
-        <GridItem bg={'green'} area="main">
-          main
+        <GridItem area="main">
+          <GamesGrid />
         </GridItem>
       </Grid>
     </div>
