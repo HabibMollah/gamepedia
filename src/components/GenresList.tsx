@@ -1,11 +1,11 @@
 import {
-  Text,
   HStack,
   Image,
   List,
   ListItem,
   Spinner,
   Box,
+  Button,
 } from '@chakra-ui/react';
 import useGenres from '../hooks/useGenres';
 import cropImage from '../services/cropImage';
@@ -37,7 +37,9 @@ function GenresList({ setGenre }: Props) {
                 borderRadius={8}
                 src={cropImage(genre.image_background)}
               />
-              <Text fontSize="lg">{genre.name}</Text>
+              <Button variant="link" fontSize="lg">
+                {genre.name}
+              </Button>
             </HStack>
           </ListItem>
         ))}
