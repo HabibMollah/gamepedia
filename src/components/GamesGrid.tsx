@@ -16,14 +16,13 @@ function GamesGrid() {
         padding={'10px'}>
         {isLoading &&
           skeletons.map((skeleton) => (
-            <GameCardContainer>
-              <GameCardSkeleton key={skeleton} />
+            <GameCardContainer key={skeleton}>
+              <GameCardSkeleton />
             </GameCardContainer>
           ))}
         {data.map((game) => (
-          <GameCardContainer>
+          <GameCardContainer key={game.id}>
             <GameCard
-              key={game.id}
               game={game}
               platforms={game.parent_platforms}
               metacritic={game.metacritic}
