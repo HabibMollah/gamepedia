@@ -10,8 +10,13 @@ import {
 import useGenres from '../hooks/useGenres';
 import cropImage from '../services/cropImage';
 
-function GenresList() {
+interface Props {
+  setGenre: (g: string) => void;
+}
+
+function GenresList({ setGenre }: Props) {
   const { data, isLoading, error } = useGenres();
+
   return (
     <>
       {isLoading && (
@@ -22,7 +27,10 @@ function GenresList() {
       <List>
         {error && <p>{error}</p>}
         {data.map((genre) => (
-          <ListItem paddingY="5px" key={genre.id}>
+          <ListItem
+            paddingY="5px"
+            key={genre.id}
+            onClick={() => setGenre(genre.slug)}>
             <HStack>
               <Image
                 boxSize={'32px'}

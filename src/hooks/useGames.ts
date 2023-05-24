@@ -12,6 +12,7 @@ export interface Game {
   rating: number;
   parent_platforms: { platform: Platform }[];
   metacritic: number;
+  genres: { slug: string }[];
 }
 
 export default function useGames() {
