@@ -5,8 +5,6 @@ import {
   List,
   ListItem,
   Spinner,
-  SimpleGrid,
-  GridItem,
   Box,
 } from '@chakra-ui/react';
 import useGenres from '../hooks/useGenres';
