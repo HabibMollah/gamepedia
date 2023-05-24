@@ -1,4 +1,4 @@
-import { HStack, Switch, useColorMode, Text, Icon } from '@chakra-ui/react';
+import { HStack, Switch, useColorMode, Icon } from '@chakra-ui/react';
 import { FiMoon, FiSun } from 'react-icons/fi';
 
 function DarkModeSwitch() {
