@@ -1,17 +1,18 @@
-import { HStack, Switch, useColorMode, Text } from '@chakra-ui/react';
+import { HStack, Switch, useColorMode, Text, Icon } from '@chakra-ui/react';
+import { FiMoon, FiSun } from 'react-icons/fi';
 
 function DarkModeSwitch() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <HStack>
-      <Text>☀️</Text>
+      <Icon as={FiSun} />
       <Switch
         colorScheme="orange"
         onChange={toggleColorMode}
         isChecked={colorMode === 'dark'}
       />
-      <Text>🌙</Text>
+      <Icon as={FiMoon} />
     </HStack>
   );
 }
