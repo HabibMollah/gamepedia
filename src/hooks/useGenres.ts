@@ -7,6 +7,6 @@ export interface Genre {
   image_background: string;
 }
 
-export default function useGames() {
+export default function useGenre() {
   return useData<Genre>('/genres');
 }
