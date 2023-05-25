@@ -12,9 +12,10 @@ import cropImage from '../services/cropImage';
 
 interface Props {
   setGenre: (g: Genre) => void;
+  selectedGenre: Genre | null;
 }
 
-function GenresList({ setGenre }: Props) {
+function GenresList({ setGenre, selectedGenre }: Props) {
   const { data, isLoading, error } = useGenres();
 
   return (
@@ -36,7 +37,8 @@ function GenresList({ setGenre }: Props) {
               />
               <Button
                 variant="link"
-                fontSize="lg"
+                fontSize="sm"
+                fontWeight={genre.id === selectedGenre?.id ? 'black' : 'normal'}
                 onClick={() => setGenre(genre)}>
                 {genre.name}
               </Button>
