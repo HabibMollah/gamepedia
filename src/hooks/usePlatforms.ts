@@ -6,8 +6,12 @@ interface Platform {
   slug: string;
 }
 
-function usePlatforms() {
-  return useData<Platform>('/platforms/lists/parents');
+function usePlatforms(selectedPlatform: Platform | null) {
+  return useData<Platform>(
+    '/platforms/lists/parents',
+    { params: { platforms: selectedPlatform?.slug } },
+    [selectedPlatform?.id]
+  );
 }
 
 export default usePlatforms;
