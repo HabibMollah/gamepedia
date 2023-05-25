@@ -7,11 +7,11 @@ import {
   Box,
   Button,
 } from '@chakra-ui/react';
-import useGenres from '../hooks/useGenres';
+import useGenres, { Genre } from '../hooks/useGenres';
 import cropImage from '../services/cropImage';
 
 interface Props {
-  setGenre: (g: string) => void;
+  setGenre: (g: Genre) => void;
 }
 
 function GenresList({ setGenre }: Props) {
@@ -27,17 +27,17 @@ function GenresList({ setGenre }: Props) {
       <List>
         {error && <p>{error}</p>}
         {data.map((genre) => (
-          <ListItem
-            paddingY="5px"
-            key={genre.id}
-            onClick={() => setGenre(genre.slug)}>
+          <ListItem paddingY="5px" key={genre.id}>
             <HStack>
               <Image
                 boxSize={'32px'}
                 borderRadius={8}
                 src={cropImage(genre.image_background)}
               />
-              <Button variant="link" fontSize="lg">
+              <Button
+                variant="link"
+                fontSize="lg"
+                onClick={() => setGenre(genre)}>
                 {genre.name}
               </Button>
             </HStack>

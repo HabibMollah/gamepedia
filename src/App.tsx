@@ -3,9 +3,10 @@ import NavBar from './components/NavBar';
 import GamesGrid from './components/GamesGrid';
 import GenresList from './components/GenresList';
 import { useState } from 'react';
+import { Genre } from './hooks/useGenres';
 
 function App() {
-  const [selectedGenre, setSelectedGenre] = useState('');
+  const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
 
   return (
     <div>
