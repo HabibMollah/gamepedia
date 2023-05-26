@@ -5,7 +5,6 @@ import {
   DrawerBody,
   DrawerContent,
   DrawerHeader,
-  DrawerOverlay,
   HStack,
   IconButton,
   Image,

@@ -1,4 +1,4 @@
-import { HStack, Hide, Image, Show } from '@chakra-ui/react';
+import { HStack, Hide, Image } from '@chakra-ui/react';
 import logo from '../assets/logo.webp';
 import DarkModeSwitch from './DarkModeSwitch';
 import SearchBar from './SearchBar';
