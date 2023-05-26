@@ -17,7 +17,13 @@ export interface GameQuery {
 }
 
 function App() {
-  const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
+  // All 4 states of the app, the platform is set to PC initially
+  const [gameQuery, setGameQuery] = useState<GameQuery>({
+    genre: null,
+    platform: { id: 1, name: 'PC', slug: 'pc' },
+    sortOrder: '',
+    searchText: '',
+  });
 
   return (
     <div>
