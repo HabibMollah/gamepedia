@@ -31,7 +31,9 @@ function GenresList({ setGenre, selectedGenre }: Props) {
         </Box>
       )}
       <List>
-        {error && <Text color="red">{error}</Text>}
+        {error && (
+          <Text color="red">Genre list error with message:{error}</Text>
+        )}
         {data.map((genre) => (
           <ListItem paddingY="5px" key={genre.id}>
             <HStack>
