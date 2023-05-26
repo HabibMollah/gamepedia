@@ -15,13 +15,15 @@ function GameCard({ game, platforms, metacritic }: Props) {
     <Card>
       <Image src={cropImage(game.background_image)} />
       <CardBody>
-        <Heading fontSize={'2xl'}>{game.name}</Heading>
-        <HStack justify={'space-between'}>
+        <HStack marginBottom={3} justify={'space-between'}>
           <PlatformsList
             platforms={platforms.map((platformObj) => platformObj.platform)}
           />
           <MetaCriticScore metacritic={metacritic} />
         </HStack>
+        <Heading as="h3" fontSize="2xl">
+          {game.name}
+        </Heading>
       </CardBody>
     </Card>
   );
