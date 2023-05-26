@@ -1,4 +1,5 @@
 import {
+  Text,
   HStack,
   Image,
   List,
@@ -30,7 +31,7 @@ function GenresList({ setGenre, selectedGenre }: Props) {
         </Box>
       )}
       <List>
-        {error && <p>{error}</p>}
+        {error && <Text color="red">{error}</Text>}
         {data.map((genre) => (
           <ListItem paddingY="5px" key={genre.id}>
             <HStack>
