@@ -1,9 +1,4 @@
-import {
-  Input,
-  InputGroup,
-  InputLeftAddon,
-  InputLeftElement,
-} from '@chakra-ui/react';
+import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { BsSearch } from 'react-icons/bs';
 
 function SearchBar() {
