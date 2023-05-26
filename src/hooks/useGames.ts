@@ -14,6 +14,7 @@ export interface Game {
   parent_platforms: { platform: Platform }[];
   metacritic: number;
   genres: { slug: string }[];
+  rating_top: number;
 }
 
 export default function useGames(gameQuery: GameQuery) {
