@@ -9,6 +9,9 @@ import {
   SiPlaystation,
   SiXbox,
   SiNintendo,
+  SiAtari,
+  SiCommodore,
+  SiSega,
 } from 'react-icons/si';
 import { BsGlobe2 } from 'react-icons/bs';
 import { IconType } from 'react-icons';
@@ -26,6 +29,9 @@ function PlatformsList({ platforms }: Props) {
     android: SiAndroid,
     ios: SiIos,
     web: BsGlobe2,
+    atari: SiAtari,
+    sega: SiSega,
+    'commodore-amiga': SiCommodore,
   };
   return (
     <HStack marginY={1}>

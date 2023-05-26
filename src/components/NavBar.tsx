@@ -1,8 +1,9 @@
 import { HStack, Image } from '@chakra-ui/react';
 import logo from '../assets/logo.webp';
 import DarkModeSwitch from './DarkModeSwitch';
-import SearchBar from './SearchBar';
-function NavBar() {
+import SearchBar, { SearchBarProps } from './SearchBar';
+
+function NavBar({ onSearch }: SearchBarProps) {
   return (
     <HStack padding={'10px'}>
       <Image
@@ -11,7 +12,7 @@ function NavBar() {
         boxSize="50px"
         borderRadius={100}
       />
-      <SearchBar />
+      <SearchBar onSearch={onSearch} />
       <DarkModeSwitch />
     </HStack>
   );
