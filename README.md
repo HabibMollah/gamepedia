@@ -15,7 +15,7 @@
 
 ## Features
 
-✨ Here are some of the key features of our game discovery website:
+✨ Here are some of the key features of  my website:
 
 - Responsive Design
 - Search Games
