@@ -6,6 +6,7 @@ import {
   Spinner,
   Box,
   Button,
+  Heading,
 } from '@chakra-ui/react';
 import useGenres, { Genre } from '../hooks/useGenres';
 import cropImage from '../services/cropImage';
@@ -20,6 +21,9 @@ function GenresList({ setGenre, selectedGenre }: Props) {
 
   return (
     <>
+      <Heading as="h2" fontSize="2xl" marginY={3}>
+        Genres
+      </Heading>
       {isLoading && (
         <Box marginTop={16} textAlign={'center'}>
           <Spinner size={'xl'} />
@@ -31,13 +35,15 @@ function GenresList({ setGenre, selectedGenre }: Props) {
           <ListItem paddingY="5px" key={genre.id}>
             <HStack>
               <Image
+                objectFit="cover"
                 boxSize={'32px'}
                 borderRadius={8}
                 src={cropImage(genre.image_background)}
               />
               <Button
                 variant="link"
-                fontSize="sm"
+                whiteSpace="normal"
+                textAlign="start"
                 fontWeight={genre.id === selectedGenre?.id ? 'black' : 'normal'}
                 onClick={() => setGenre(genre)}>
                 {genre.name}
