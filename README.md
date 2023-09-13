@@ -1,1 +1,1 @@
-GamePedia a game discovery website.
+# GamePedia a game discovery website.
